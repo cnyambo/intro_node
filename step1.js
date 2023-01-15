@@ -1,14 +1,13 @@
 const fs =require('fs');
 const cat = (path) =>{ 
     fs.readFile(`${path}`, 'utf8', function(err, data) {
-    if(err){
-        console.log(err);
-        process.kill(1)
-    }
-    else{
-        console.log(data)
-    }
-});
+        if(err) {
+            console.log(err);
+            process.kill(1);
+        } else {
+            console.log(data)
+        }
+    });
 }
 
 //Step one get data 
